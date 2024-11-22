@@ -2,7 +2,7 @@
 The course focuses on mastering the rapidly evolving landscape of Big Data and Data Science through hands-on experience. It introduces students to advanced tools, methodologies, and frameworks to extract meaningful insights from large datasets and build predictive models.
 
 ## What We Did in the Project
-Our project, titled "HR Maze Analytics: Job Change Prediction of Data Scientists," is a collaborative effort by an international team at the University of Pavia. It explores the application of Big Data and Data Science to predict job-seeking intentions among candidates trained in data science. By leveraging machine learning models and advanced analytics, we derived valuable insights into the factors influencing career decisions.
+"HR Maze Analytics: Job Change Prediction of Data Scientists," is a small-scope academic project and a collaborative effort by an international team at the University of Pavia. It explores the application of Big Data and Data Science to predict job-seeking intentions among candidates trained in data science. By leveraging machine learning models and advanced analytics, we derived valuable insights into the factors influencing career decisions.
 
 ## Workflow
 #### Data Acquisition and Preparation
@@ -29,7 +29,7 @@ Our project, titled "HR Maze Analytics: Job Change Prediction of Data Scientists
 - Virtual Machine setup 
 - Programming Languages: Python, PySpark, PyMongo.
 - Frameworks: Hadoop, Spark, MongoDB.
-- Visualization analysis: Pandas, Seaborn, Matplotlib.
+- Visualization and Analysis: Pandas, Seaborn, Matplotlib.
 
 ## Challenges Encountered
 - Connectivity issues in distributed environments (e.g., Hadoop and MongoDB).
