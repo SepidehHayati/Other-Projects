@@ -1,0 +1,20 @@
+Serial:
+--------
+1. compile:
+g++ -fopenmp -o serial_op serial_op.cpp -I/usr/include/python3.8 -I/home/ubuntu/.local/lib/python3.8/site-packages/numpy/core/include -lpython3.8 -lm
+
+
+2.RUN:
+./serial_SA data_20K.csv
+
+
+
+Parallel:
+---------
+
+1. Compile:
+mpic++ -o parallel_op parallel_op.cpp -I/usr/include/python3.8 -I/home/ubuntu/.local/lib/python3.8/site-packages/numpy/core/include -lpython3.8 -lm
+
+
+2. RUN:
+mpirun -np 2 ./parallel_op data_80K.csv
