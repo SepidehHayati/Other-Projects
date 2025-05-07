@@ -1,0 +1,113 @@
+How to run on cloud: Light Cluster
+
+1. Turning on Clusters (4 Clusters)
+2. Entering to Clusters:
+
+gcloud compute ssh ubuntu@light-cluster-1 --zone=us-central1-a
+gcloud compute ssh ubuntu@light-cluster-2 --zone=us-central1-a
+gcloud compute ssh ubuntu@light-cluster-3 --zone=us-central1-a
+gcloud compute ssh ubuntu@light-cluster-4 --zone=us-central1-a
+
+
+3. TO CHECK THE FILES SAVED ON CLUSTERS:
+
+To check ALL Files:
+----------
+ls -lh ~/
+
+
+To check folder Dataset:
+---------------
+ls -lh ~/dataset/
+
+
+To delete files from clusters:
+rm -f
+
+
+4. How to send Datasets from ubuntu to cluster 1:
+
+gcloud compute scp /home/ubuntu/dataset/data_20K.csv ubuntu@light-cluster-1:/home/ubuntu/dataset/ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/dataset/data_20K.csv ubuntu@light-cluster-2:/home/ubuntu/dataset/ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/dataset/data_20K.csv ubuntu@light-cluster-3:/home/ubuntu/dataset/ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/dataset/data_20K.csv ubuntu@light-cluster-4:/home/ubuntu/dataset/ --zone=us-central1-a
+
+
+gcloud compute scp /home/ubuntu/dataset/data_80K.csv ubuntu@light-cluster-1:/home/ubuntu/dataset/ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/dataset/data_80K.csv ubuntu@light-cluster-2:/home/ubuntu/dataset/ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/dataset/data_80K.csv ubuntu@light-cluster-3:/home/ubuntu/dataset/ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/dataset/data_80K.csv ubuntu@light-cluster-4:/home/ubuntu/dataset/ --zone=us-central1-a
+
+5. Then sending Codes  to clusters:
+
+Parallel:
+gcloud compute scp /home/ubuntu/parallel_op.cpp ubuntu@light-cluster-1:/home/ubuntu/ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/parallel_op.cpp ubuntu@light-cluster-2:/home/ubuntu/ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/parallel_op.cpp ubuntu@light-cluster-3:/home/ubuntu/ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/parallel_op.cpp ubuntu@light-cluster-4:/home/ubuntu/ --zone=us-central1-a
+
+Serial:
+gcloud compute scp /home/ubuntu/serial_SA.cpp ubuntu@light-cluster-1:~ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/serial_SA.cpp ubuntu@light-cluster-2:~ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/serial_SA.cpp ubuntu@light-cluster-3:~ --zone=us-central1-a
+gcloud compute scp /home/ubuntu/serial_SA.cpp ubuntu@light-cluster-4:~ --zone=us-central1-a 
+
+
+6. Then Compile files:
+
+Parallel:
+mpic++ -fopenmp -o parallel_op parallel_op.cpp \
+  -I/usr/include/python3.9 \
+  -I/home/ubuntu/.local/lib/python3.9/site-packages/numpy/core/include \
+  -lpython3.9 -lm
+
+Serial:
+g++ -fopenmp -o serial_SA serial_SA.cpp \
+  -I/usr/include/python3.9 \
+  -I/home/ubuntu/.local/lib/python3.9/site-packages/numpy/core/include \
+  -lpython3.9 -lm
+
+
+7. Check the connection between clusters (Hostfil):
+
+From Clisuer 01 to :
+
+To node 02: ping -c 4 10.128.0.11
+To node 03: ping -c 4 10.128.0.12
+To node 04: ping -c 4 10.128.0.13
+
+8. Run:
+
+Parallel: 
+mpirun --hostfile hostfile -np 1 ./parallel_op data_20K.csv
+mpirun --hostfile hostfile -np 2 ./parallel_op data_20K.csv
+mpirun --hostfile hostfile -np 4 ./parallel_op data_20K.csv
+mpirun --hostfile hostfile -np 8 ./parallel_op data_20K.csv
+
+mpirun --hostfile hostfile -np 1 ./parallel_op data_40K.csv
+mpirun --hostfile hostfile -np 2 ./parallel_op data_40K.csv
+mpirun --hostfile hostfile -np 4 ./parallel_op data_40K.csv
+mpirun --hostfile hostfile -np 8 ./parallel_op data_40K.csv
+
+
+mpirun --hostfile hostfile -np 1 ./parallel_op data_80K.csv
+mpirun --hostfile hostfile -np 2 ./parallel_op data_80K.csv
+mpirun --hostfile hostfile -np 4 ./parallel_op data_80K.csv
+mpirun --hostfile hostfile -np 8 ./parallel_op data_80K.csv
+
+Serial: 
+taskset -c 0 ./serial_SA data_20K.csv
+taskset -c 0,1 ./serial_SA data_20K.csv
+taskset -c 0,1,2,3 ./serial_SA data_20K.csv
+taskset -c 0,1,2,3,4,5,6,7 ./serial_SA data_20K.csv
+
+taskset -c 0 ./serial_SA data_40K.csv
+taskset -c 0,1 ./serial_SA data_40K.csv
+taskset -c 0,1,2,3 ./serial_SA data_40K.csv
+taskset -c 0,1,2,3,4,5,6,7 ./serial_SA data_40K.csv
+
+taskset -c 0 ./serial_SA data_80K.csv
+taskset -c 0,1 ./serial_SA data_80K.csv
+taskset -c 0,1,2,3 ./serial_SA data_80K.csv
+taskset -c 0,1,2,3,4,5,6,7 ./serial_SA data_80K.csv
+

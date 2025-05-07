@@ -1,0 +1,116 @@
+How to run on cloud: Fat Cluster
+
+1.Eenter to nodes:
+--------------------------------------------
+
+fat-cluster-3 --zone=us-central1-a:
+gcloud compute ssh ubuntu@fat-cluster-3 --zone=us-central1-a
+
+
+fat-cluster-2 --zone=us-central1-b
+gcloud compute ssh ubuntu@fat-cluster-2 --zone=us-central1-b
+
+
+2. send file from ubuntu to cloud:
+--------------------------------------------
+gcloud compute scp /home/ubuntu/parallel_op.cpp ubuntu@fat-cluster-2:~/ \
+  --zone=us-central1-b
+gcloud compute scp /home/ubuntu/parallel_op.cpp ubuntu@fat-cluster-3:~/ \
+  --zone=us-central1-a
+
+
+
+
+3.sending dataset from ubuntu to clusters:
+--------------------------------------------
+
+- from ubuntu to node 02:
+gcloud compute scp /home/ubuntu/dataset/data_40K.csv ubuntu@fat-cluster-2:/home/ubuntu/dataset/ --zone=us-central1-b
+
+-from ubuntu to node 03:
+gcloud compute scp /home/ubuntu/dataset/data_40K.csv ubuntu@fat-cluster-3:/home/ubuntu/dataset/ --zone=us-central1-a
+gcloud compute scp ~/dataset/data_80K.csv ubuntu@fat-cluster-3:/home/ubuntu/dataset/ --zone=us-central1-a
+
+
+
+
+
+5. Compile:
+----------
+
+Serial:
+
+g++ -fopenmp -o serial_SA serial_SA.cpp \
+  -I/usr/include/python3.9 \
+  -I/home/ubuntu/.local/lib/python3.9/site-packages/numpy/core/include \
+  -lpython3.9 -lm
+
+
+Parallel:
+
+mpic++ -fopenmp -o parallel_op parallel_op.cpp \
+  -I/usr/include/python3.9 \
+  -I/home/ubuntu/.local/lib/python3.9/site-packages/numpy/core/include \
+  -lpython3.9 -lm
+
+
+
+
+5.Running on cloud
+--------------------------------------------
+Parallel:
+----------
+
+mpirun --hostfile hostfile -np 1 ./parallel_op data_20K.csv
+mpirun --hostfile hostfile -np 2 ./parallel_op data_20K.csv
+mpirun --hostfile hostfile -np 4 ./parallel_op data_20K.csv
+mpirun --hostfile hostfile -np 8 ./parallel_op data_20K.csv
+
+mpirun --hostfile hostfile -np 1 ./parallel_op data_40K.csv
+mpirun --hostfile hostfile -np 2 ./parallel_op data_40K.csv
+mpirun --hostfile hostfile -np 4 ./parallel_op data_40K.csv
+mpirun --hostfile hostfile -np 8 ./parallel_op data_40K.csv
+
+
+mpirun --hostfile hostfile -np 1 ./parallel_op data_80K.csv
+mpirun --hostfile hostfile -np 2 ./parallel_op data_80K.csv
+mpirun --hostfile hostfile -np 4 ./parallel_op data_80K.csv
+mpirun --hostfile hostfile -np 8 ./parallel_op data_80K.csv
+
+------------------------------------------------------------
+
+
+Serial:
+-------
+time ./serial_SA data_20K.csv
+time ./serial_SA data_40K.csv
+time ./serial_SA data_80K.csv
+time ./serial_SA data_160K.csv
+
+./serial_SA data_20K.csv
+./serial_SA data_40K.csv
+./serial_SA data_80K.csv
+./serial_SA data_160K.csv
+
+
+taskset -c 0 ./serial_SA data_80K.csv
+taskset -c 0,1 ./serial_SA data_80K.csv
+taskset -c 0,1,2,3 ./serial_SA data_80K.csv
+taskset -c 0,1,2,3,4,5,6,7 ./serial_SA data_80K.csv
+
+
+-------------- TO CHECK THE FILES SAVED ON CLUSTERS--------------
+ALL Files:
+----------
+
+ls -lh ~/
+
+Folder Dataset:
+---------------
+ls -lh ~/dataset/
+
+
+------------- TO DELETE FILES FROM CLOUD ------------------------
+
+rm -f parallel_op parallel_op.cpp
+
