@@ -87,7 +87,12 @@ This material is based on the **SQL Data Warehouse course by Baraa**.
 👉 [Download Material](https://www.datawithbaraa.com/sql-introduction/advanced-sql-project/#google_vignette)
 
 ## Part 4: Create Project Plan using Notion:
-
+To better organize and track the progress of this project, I created a dedicated Notion workspace that includes tasks, timelines, and planning documentation.
+🔗 [View the Notion Project Planning Page](https://www.notion.so/Data-Warehouse-Project-1f18f6be5865804f801ed6acfc875abb?pvs=4)
+This space serves as a centralized hub for managing:
+- Project milestones
+- Task lists
+- Notes and goals
 
 **Project requirements:**
 Building the Datawarhouse (Data Engineering):
