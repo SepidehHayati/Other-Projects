@@ -30,7 +30,7 @@ This phase is aimed at providing business insights using advanced SQL techniques
 - Subqueries
 - Reports
 
-## Part 2: Defention and Methods:
+## Part 2: Definition and Methods:
 
 ### What is ETL?
 **ETL (Extract, Transform, Load)** is a data integration process that combines data from multiple sources into a single, consistent data store.
@@ -81,6 +81,10 @@ This phase is aimed at providing business insights using advanced SQL techniques
     * SCD 1: Overwrite (we are updating the records with the new information from resources by overwriting the old value; Upsert: Update + Insert and we losse history) ✅ (*Used in this project*)
     * SCD 2: Historization (we insert new recorde without deleting and overwriting the old data)
 
+## Part 3: Download the Materials:
+This material is based on the **SQL Data Warehouse course by Baraa**, a respected expert in Data Warehousing and Data Engineering.
+You can **download the course materials here**:  
+👉 [Download Material]([https://short.url/example](https://www.datawithbaraa.com/sql-introduction/advanced-sql-project/#google_vignette))
 
 
 **Project requirements:**
