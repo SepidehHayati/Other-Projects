@@ -118,5 +118,8 @@ In this project, different types of data management architectures were considere
 3. Data Lakehouse (A hybrid approach combining the flexibility of data lakes with the structure and management features of data warehouses.)
 4. Data Mesh (A decentralized architecture where different domains own and manage their data independently, following a product-based approach.)
    
-## Part 7: How to buil a Data Warehouse
-
+## Part 7: How to build a Data Warehouse
+1. Inmon
+2. Kimball
+3. Data Vault
+4. Medallion Architecture (Having 3 layers: Bronze, Silver, Gold) ✅ (Used in this project)
