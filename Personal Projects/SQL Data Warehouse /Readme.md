@@ -126,7 +126,7 @@ Several well-known methodologies exist for building a Data Warehouse. In this pr
 3. Data Vault
 4. Medallion Architecture
   A modern layered architecture used in lakehouse environments. It includes: ✅ (Used in this project)
-  - **Bronze Layer**: Raw data (landing zone)
-  - **Silver Layer**: Cleaned and standardized data for analysis
-  - **Gold Layer**: prepared data and optimized for analytics and reporting
+  - **Bronze Layer**: Raw data (tables, full load, Load method as-is data, )
+  - **Silver Layer**: Cleaned and standardized data for analysis (tables, full load, Load method data transformation step, Data aggrigation and Integration and ..)
+  - **Gold Layer**: prepared data and optimized for analytics and reporting (views, start schema)
 
