@@ -34,6 +34,8 @@ This phase is aimed at providing business insights using advanced SQL techniques
 
 # Definitions related to the Project:
 ## What is ETL?
+**ETL (Extract, Transform, Load)** is a data integration process that combines data from multiple sources into a single, consistent data store.
+
 
 ### Extraction (E)
 - Extraction method (push extraction, pull extraction)
@@ -55,9 +57,21 @@ This phase is aimed at providing business insights using advanced SQL techniques
     * Full Load: Truncate and insert, Update and insert (Upsert), Drop-Create-Insert
     * Incremental Load: Upsert, Append, Merge(Update, Insert, Delete)
 - Slowly Changing Dimention (SCD)
-    * SDC 0: No Historization
-    * SCD 1: Overwrite
-    * SCD 2: Historization
+    * SDC 0: No Historization (we are no going to update anything)
+    * SCD 1: Overwrite (we are updating the records with the new information from resources by overwriting the old value; Upsert: Update + Insert and we losse history)
+    * SCD 2: Historization (we insert new recorde without deleting and overwriting the old data)
+## What is ETL?
+For this project we will do: 
+Extraction:
+- Pull Extraction
+- Full Extraction
+- File Parding
+Transformation:
+- All Types of Transformation
+Load:
+- Batch Processing
+- Full Load (Truncate and Insert)
+- SCD 1
 
 
 **Project requirements:**
