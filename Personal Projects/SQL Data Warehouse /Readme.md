@@ -88,7 +88,7 @@ This phase is aimed at providing business insights using advanced SQL techniques
 ## Part 3: Download the Materials:
 This material is based on the **SQL Data Warehouse course by Baraa**.
 
-👉 [Download Material](https://www.datawithbaraa.com/sql-introduction/advanced-sql-project/#google_vignette)
+🔗 [Download Material](https://www.datawithbaraa.com/sql-introduction/advanced-sql-project/#google_vignette)
 
 ## Part 4: Create Project Plan using Notion:
 To better organize and track the progress of this project, I created a dedicated Notion workspace that includes tasks, timelines, and planning documentation.
