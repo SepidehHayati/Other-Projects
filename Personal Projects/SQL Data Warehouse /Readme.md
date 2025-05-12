@@ -117,3 +117,6 @@ In this project, different types of data management architectures were considere
 2. Data Lake (semi-structured data)
 3. Data Lakehouse (A hybrid approach combining the flexibility of data lakes with the structure and management features of data warehouses.)
 4. Data Mesh (A decentralized architecture where different domains own and manage their data independently, following a product-based approach.)
+   
+## Part 7: How to buil a Data Warehouse
+
