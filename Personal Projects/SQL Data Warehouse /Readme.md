@@ -111,7 +111,9 @@ Developing SQL-based Analytics to deliver detailed insights
 
 ## Part 6: Choose Data Management Architecture
 ### Types 
+In this project, different types of data management architectures were considered, and **Data Warehouse** was selected as the most appropriate solution for structured data.
+
 1. Data Warehouse (structured data) ✅ (Used in this project)
 2. Data Lake (semi-structured data)
-3. Data Lakehouse (between Data Warehouse and Data lake: flexibility of having different types of data lake, but they are organized like a data warehouse.)
-4. Data Mesh (instead of having a Data Management System, having different and decentralized Data management systems.)
+3. Data Lakehouse (A hybrid approach combining the flexibility of data lakes with the structure and management features of data warehouses.)
+4. Data Mesh (A decentralized architecture where different domains own and manage their data independently, following a product-based approach.)
