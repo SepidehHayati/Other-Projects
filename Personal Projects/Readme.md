@@ -1,4 +1,4 @@
-# SQL Project
+# Data Engineering Project with SQL 
 
 ## 1. Data Warehouse (Organize, Structure, Prepare)
 
