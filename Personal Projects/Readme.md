@@ -72,7 +72,7 @@ This phase is aimed at providing business insights using advanced SQL techniques
 - Business Rules & Logic
 - Data Aggregation
 
-✅ *All applied in this project*
+✅ *All types of transformation are applied in this project*
 
 ### Load (L)
 - Processing Types (Batch processing, Streaming processing) ✅ (*Batch Processing is used in this project*)
