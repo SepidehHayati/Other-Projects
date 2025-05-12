@@ -86,6 +86,8 @@ This material is based on the **SQL Data Warehouse course by Baraa**.
 
 👉 [Download Material](https://www.datawithbaraa.com/sql-introduction/advanced-sql-project/#google_vignette)
 
+## Part 4: Create Project Plan using Notion:
+
 
 **Project requirements:**
 Building the Datawarhouse (Data Engineering):
