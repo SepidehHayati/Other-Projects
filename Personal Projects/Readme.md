@@ -32,7 +32,22 @@ This phase is aimed at providing business insights using advanced SQL techniques
 - Subqueries
 - Reports
 
+# Definitions related to the Project:
+## What is ETL?
 
+### Extraction (E)
+- Extraction method (push extraction, pull extraction)
+- Extract types (full extraction, incremental extraction: moving the data to the Data Warehouse, which has changed)
+- Extract technique (ِManual Data Extraction, Database Quering, File Parsing, API Calls, Event Base Streaming, SDS, Web Scraping)
+
+### Transformation (T)
+- Data Enrichment
+- Data Integration
+- Derived columns
+- Data Cleansing (Remove Duplicate, Data Filtering, Handling Missing Data, Handling invalid values, Handling unwanted spaces, Data Type casting, Outlier detector)
+- Data Normalization and Standardization
+- Business Rules and Logic
+- Data Aggrigation
 
 
 **Project requirements:**
