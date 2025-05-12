@@ -27,6 +27,10 @@ This phase is aimed at providing business insights using advanced SQL techniques
 - Use complex joins, window functions, and conditional logic.
 - Develop reports and KPIs.
 - Support decision-making through query-driven insights.
+- window function
+- CTE
+- Subqueries
+- Reports
 
 
 
