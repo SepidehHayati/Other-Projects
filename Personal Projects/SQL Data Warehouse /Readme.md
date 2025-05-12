@@ -96,12 +96,4 @@ To better organize and track the progress of this project, I created a dedicated
 🔗 [View the Notion Project Planning Page](https://www.notion.so/Data-Warehouse-Project-1f18f6be5865804f801ed6acfc875abb?pvs=4)
 
 
-**Project requirements:**
-Building the Datawarhouse (Data Engineering):
-specifications:
-1. Data sources
-2. Data Quality
-3. Integration
-4. Scope
-5. documentation
 
