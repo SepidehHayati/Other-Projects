@@ -1,8 +1,8 @@
 # Data Engineering Project with SQL 
 This project demonstrates a complete data pipeline using SQL, including Data Warehousing, ETL/ELT processes, Exploratory Data Analysis, and Advanced Analytics to support business decision-making.
-
-## 1. Data Warehouse (Organize, Structure, Prepare)
-
+## Part 1: Steps of Project:
+Steps of the project:
+### 1. Data Warehouse (Organize, Structure, Prepare)
 This phase focuses on preparing and organizing raw data into a structured and optimized format suitable for analysis.
 
 - **ETL/ELT Processing**: Extract, Transform, and Load data into a data warehouse.
@@ -12,8 +12,7 @@ This phase focuses on preparing and organizing raw data into a structured and op
 - **Data Load**: Load processed data into the warehouse.
 - **Data Modeling**: Design schemas (star/snowflake) and define relationships.
 
-## 2. Exploratory Data Analysis (Understand Data)
-
+### 2. Exploratory Data Analysis (Understand Data)
 This phase is about discovering patterns and gaining initial insights into the data.
 
 - **Basic Queries**: Perform simple `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`, etc.
@@ -21,10 +20,8 @@ This phase is about discovering patterns and gaining initial insights into the d
 - **Simple Aggregations**: Use `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`, and `GROUP BY`.
 - **Subqueries**: Write nested queries for intermediate data processing.
 
-## 3. Advanced Data Analytics (Answer Business Questions)
-
+### 3. Advanced Data Analytics (Answer Business Questions)
 This phase is aimed at providing business insights using advanced SQL techniques.
-
 - Use complex joins, window functions, and conditional logic.
 - Develop reports and KPIs.
 - Support decision-making through query-driven insights.
@@ -33,34 +30,34 @@ This phase is aimed at providing business insights using advanced SQL techniques
 - Subqueries
 - Reports
 
-# Definitions related to the Project:
-## What is ETL?
+## Part 2: Defention and Methods:
+
+### What is ETL?
 **ETL (Extract, Transform, Load)** is a data integration process that combines data from multiple sources into a single, consistent data store.
 
+#### E: Extraction
+- Extraction Methods:
+   * Push Extraction
+   * Pull Extraction ✅ (Used in this project)
 
-### Extraction (E)
-**Extraction Methods**:
-- Push Extraction
-- Pull Extraction ✅ (Used in this project)
+- Extraction Types:
+  * Full Extraction ✅ (Used in this project)
+  * Incremental Extraction
 
-**Extraction Types**:
-- Full Extraction ✅ (Used in this project)
-- Incremental Extraction
+- Extraction Techniques:
+  * Manual Data Extraction
+  * Database Querying
+  * File Parsing ✅ (Used in this project)
+  * API Calls
+  * Event-Based Streaming
+  * SDS
+  * Web Scraping
 
-**Extraction Techniques**:
-- Manual Data Extraction
-- Database Querying
-- File Parsing ✅ (Used in this project)
-- API Calls
-- Event-Based Streaming
-- SDS
-- Web Scraping
-
-**Transformation Techniques**:
+#### T: Transformation Techniques:
 - Data Enrichment
 - Data Integration
 - Derived Columns
-- **Data Cleansing**:
+- Data Cleansing:
   * Remove Duplicates
   * Data Filtering
   * Handling Missing Data
@@ -74,7 +71,7 @@ This phase is aimed at providing business insights using advanced SQL techniques
 
 ✅ *All types of transformation are applied in this project*
 
-### Load (L)
+#### L: Load
 - Processing Types (Batch processing, Streaming processing) ✅ (*Batch Processing is used in this project*)
 - Load Method (Full, Incremental)
     * Full Load: Truncate and insert, Update and insert (Upsert), Drop-Create-Insert ✅ (*Full Load is Used in this project*)
