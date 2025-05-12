@@ -83,7 +83,7 @@ This phase is aimed at providing business insights using advanced SQL techniques
 
 ## Part 3: Download the Materials:
 This material is based on the **SQL Data Warehouse course by Baraa**, a respected expert in Data Warehousing and Data Engineering.
-You can **download the course materials here**:  
+
 👉 [Download Material](https://www.datawithbaraa.com/sql-introduction/advanced-sql-project/#google_vignette)
 
 
