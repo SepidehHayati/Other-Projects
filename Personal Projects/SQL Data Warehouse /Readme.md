@@ -119,7 +119,14 @@ In this project, different types of data management architectures were considere
 4. Data Mesh (A decentralized architecture where different domains own and manage their data independently, following a product-based approach.)
    
 ## Part 7: How to build a Data Warehouse
+Several well-known methodologies exist for building a Data Warehouse. In this project, the **Medallion Architecture** was chosen due to its layered approach and clear separation of raw, cleaned, and curated data.
+
 1. Inmon
 2. Kimball
 3. Data Vault
-4. Medallion Architecture (Having 3 layers: Bronze, Silver, Gold) ✅ (Used in this project)
+4. Medallion Architecture
+  A modern layered architecture used in lakehouse environments. It includes: ✅ (Used in this project)
+  - **Bronze Layer**: Raw data (landing zone)
+  - **Silver Layer**: Cleaned and conformed data
+  - **Gold Layer**: Curated data optimized for analytics and reporting
+
