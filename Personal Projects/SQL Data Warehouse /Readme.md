@@ -1,5 +1,9 @@
 # Data Engineering Project with SQL 
 This project demonstrates a complete data pipeline using SQL, including Data Warehousing, ETL/ELT processes, Exploratory Data Analysis, and Advanced Analytics to support business decision-making.
+
+🚧 **Note:** This project is currently in progress and the repository is being updated step by step.  
+📝 Project planning and progress tracking are available on [Notion](https://www.notion.so/Data-Warehouse-Project-1f18f6be5865804f801ed6acfc875abb?pvs=4).
+
 ## Part 1: Steps of Project:
 Steps of the project:
 ### 1. Data Warehouse (Organize, Structure, Prepare)
