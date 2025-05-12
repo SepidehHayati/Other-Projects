@@ -74,9 +74,9 @@ This phase is aimed at providing business insights using advanced SQL techniques
 ✅ *All applied in this project*
 
 ### Load (L)
-- Processing Types (Batch processing, Streaming processing) ✅ (* Batch Processing is Used in this project*)
+- Processing Types (Batch processing, Streaming processing) ✅ (*Batch Processing is used in this project*)
 - Load Method (Full, Incremental)
-    * Full Load: Truncate and insert, Update and insert (Upsert), Drop-Create-Insert ✅ (* Full Load is Used in this project*)
+    * Full Load: Truncate and insert, Update and insert (Upsert), Drop-Create-Insert ✅ (*Full Load is Used in this project*)
     * Incremental Load: Upsert, Append, Merge(Update, Insert, Delete)
 - Slowly Changing Dimention (SCD)
     * SDC 0: No Historization (we are no going to update anything)
