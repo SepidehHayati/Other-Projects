@@ -82,7 +82,7 @@ This phase is aimed at providing business insights using advanced SQL techniques
     * SCD 2: Historization (we insert new recorde without deleting and overwriting the old data)
 
 ## Part 3: Download the Materials:
-This material is based on the **SQL Data Warehouse course by Baraa**, a respected expert in Data Warehousing and Data Engineering.
+This material is based on the **SQL Data Warehouse course by Baraa**.
 
 👉 [Download Material](https://www.datawithbaraa.com/sql-introduction/advanced-sql-project/#google_vignette)
 
