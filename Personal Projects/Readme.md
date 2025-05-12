@@ -49,6 +49,16 @@ This phase is aimed at providing business insights using advanced SQL techniques
 - Business Rules and Logic
 - Data Aggrigation
 
+### Load (L)
+- Processing Types (Batch processing, Streaming processing)
+- Load Method (Full, Incremental)
+    * Full Load: Truncate and insert, Update and insert (Upsert), Drop-Create-Insert
+    * Incremental Load: Upsert, Append, Merge(Update, Insert, Delete)
+- Slowly Changing Dimention (SCD)
+    * SDC 0: No Historization
+    * SCD 1: Overwrite
+    * SCD 2: Historization
+
 
 **Project requirements:**
 Building the Datawarhouse (Data Engineering):
