@@ -42,16 +42,16 @@ This phase is aimed at providing business insights using advanced SQL techniques
 #### E: Extraction
 - Extraction Methods:
    * Push Extraction
-   * Pull Extraction ✅ (Used in this project)
+   * Pull Extraction ✅ (_Used in this project_)
 
 - Extraction Types:
-  * Full Extraction ✅ (Used in this project)
+  * Full Extraction ✅ (_Used in this project_)
   * Incremental Extraction
 
 - Extraction Techniques:
   * Manual Data Extraction
   * Database Querying
-  * File Parsing ✅ (Used in this project)
+  * File Parsing ✅ (_Used in this project_)
   * API Calls
   * Event-Based Streaming
   * SDS
@@ -73,12 +73,12 @@ This phase is aimed at providing business insights using advanced SQL techniques
 - Business Rules & Logic
 - Data Aggregation
 
-✅ *All types of transformation are applied in this project*
+✅ _All types of transformation are applied in this project_
 
 #### L: Load
-- Processing Types (Batch processing, Streaming processing) ✅ (*Batch Processing is used in this project*)
+- Processing Types (Batch processing, Streaming processing) ✅ (_Batch Processing is used in this project_)
 - Load Method (Full, Incremental)
-    * Full Load: Truncate and insert, Update and insert (Upsert), Drop-Create-Insert ✅ (*Full Load is Used in this project*)
+    * Full Load: Truncate and insert, Update and insert (Upsert), Drop-Create-Insert ✅ (_Full Load is Used in this project_)
     * Incremental Load: Upsert, Append, Merge(Update, Insert, Delete)
 - Slowly Changing Dimention (SCD)
     * SDC 0: No Historization (we are no going to update anything)
@@ -113,7 +113,7 @@ Developing SQL-based Analytics to deliver detailed insights
 ### Types 
 In this project, different types of data management architectures were considered, and **Data Warehouse** was selected as the most appropriate solution for structured data.
 
-1. Data Warehouse (structured data) ✅ (Used in this project)
+1. Data Warehouse (structured data) ✅ (_Used in this project_)
 2. Data Lake (semi-structured data)
 3. Data Lakehouse (A hybrid approach combining the flexibility of data lakes with the structure and management features of data warehouses.)
 4. Data Mesh (A decentralized architecture where different domains own and manage their data independently, following a product-based approach.)
