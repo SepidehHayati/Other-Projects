@@ -96,4 +96,22 @@ To better organize and track the progress of this project, I created a dedicated
 🔗 [View the Notion Project Planning Page](https://www.notion.so/Data-Warehouse-Project-1f18f6be5865804f801ed6acfc875abb?pvs=4)
 
 
+## Part 5: Analyzing Project Requirement:
+### Building the DWH (Data Engineering)
+#### objective
+Developing a DWH using SQL Server 
+#### Specification
+- Data Sources: Import data from two source systems (ERP and CRM) provided as CSV files.
+- Data Quality: Cleanse and resolve data quality issues before analysis.
+- Integration: Combine both sources into a single, user-friendly data model designed for analytical queries.
+- Scope: Focus on the latest dataset only; historization of data is not required.
+- Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+### BI: Analytics and Reporting
+Developing SQL-based Analytics to deliver detailed insights
 
+## Part 6: Choose Data Management Architecture
+### Types 
+1. Data Warehouse (structured data) ✅ (Used in this project)
+2. Data Lake (semi-structured data)
+3. Data Lakehouse (between Data Warehouse and Data lake: flexibility of having different types of data lake, but they are organized like a data warehouse.)
+4. Data Mesh (instead of having a Data Management System, having different and decentralized Data management systems.)
