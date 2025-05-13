@@ -128,16 +128,21 @@ Several well-known methodologies exist for building a Data Warehouse. In this pr
    A modern layered architecture is commonly used in lakehouse environments. It organizes data into three progressive layers:
 
    - **Bronze Layer**  
-     Raw data (Full-load Tables).  
-     Load method: As-is, no transformation.
+     - Raw data (Full-load Tables).  
+     - Load method: As-is, no transformation.
+     - Purpose: Landing zone for raw ingested data.
+
 
    - **Silver Layer**  
-     Cleaned and standardized data are ready for analysis. (Full-load Tables) 
-     Includes data cleansing, enrichment, drived column, transformation, and standardization.  
-     Load method: Full load with transformation.
+     - Cleaned and standardized data are ready for analysis. (Full-load Tables) 
+     - Includes data cleansing, enrichment, derived column, transformation, and standardization.  
+     - Load method: Full load with transformation.
+     - Purpose: Structured, consistent data prepared for analytics.
 
-   - **Gold Layer**  
-     Data optimized for analytics and reporting.  
-     Stored as views or star schema tables for use in dashboards and business intelligence tools.
-     Aggregation and integration
-     Load method: No load
+
+   - **Gold Layer**
+     - Data optimized for analytics and reporting.  
+     - Stored as: Views or star schema tables.  
+     - Includes: Aggregation and integration for business use cases.  
+     - Load method: No load (query from the silver layer via views or BI tools).  
+     - Purpose: Final curated dataset for dashboards, KPIs, and insights.
