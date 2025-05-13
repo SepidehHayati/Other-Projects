@@ -146,3 +146,6 @@ Several well-known methodologies exist for building a Data Warehouse. In this pr
      - Includes: Aggregation and integration for business use cases.  
      - Load method: No load (query from the silver layer via views or BI tools).  
      - Purpose: Final curated dataset for dashboards, KPIs, and insights.
+
+  ## Part 8: Draw the Data Architecture using Draw.io
+
