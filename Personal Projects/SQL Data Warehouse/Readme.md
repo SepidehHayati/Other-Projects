@@ -169,5 +169,51 @@ Several well-known methodologies exist for building a Data Warehouse. In this pr
   #### Silver
    - Exactly like Bronze Layer
 
-  #### Gold
+  #### Gold Layer
+  
+  All table names in the Gold layer must use meaningful, **business-aligned** names, starting with a **category prefix**.
+  
+  - **Format**: `<category>_<entity>`
+    - `<category>`: Describes the role of the table, such as:
+      - `dim_` → Dimension table  
+      - `fact_` → Fact table  
+      - `agg_` → Aggregated table  
+    - `<entity>`: Descriptive name aligned with the business domain (e.g., `customers`, `products`, `sales`)
+  
+  - **Examples**:
+    - `dim_customers` → Dimension table for customer data  
+    - `fact_sales` → Fact table containing sales transactions  
+    - `agg_sales_monthly` → Aggregated sales table (monthly)
+   
+  ### Column Naming Conventions
+
+  #### Surrogate Keys
+  - All primary keys in dimension tables must use the suffix `_key`.
+  
+  - **Format**: `<table_name>_key`
+    - `<table_name>`: Refers to the name of the table or entity the key belongs to.
+    - `_key`: Suffix indicating that this column is a surrogate key.
+  
+  - **Example**:  
+    `customer_key` → Surrogate key in the `dim_customers` table.
+  
+  ---
+  
+  #### Technical Columns
+  - All technical columns must start with the prefix `dwh_`, followed by a descriptive name indicating the column's purpose.
+  
+  - **Format**: `dwh_<column_name>`
+    - `dwh_`: Prefix exclusively for system-generated metadata.
+    - `<column_name>`: Descriptive name indicating the column’s purpose.
+  
+  - **Example**:  
+    `dwh_load_date` → System-generated column used to store the date when the record was loaded.
+  
+  #### Stored Procedure
+  - All stored procedures used for loading data must follow the naming pattern:
+  - load_<layer>
+    - <layer>: represents the layer being loaded, such as `bronze`, `silver`, or `gold`
+    - Example: `load_bronze`; stored procedure for loading data into the Bronze layer
+    
+
 
