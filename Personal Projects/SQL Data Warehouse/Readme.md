@@ -148,4 +148,11 @@ Several well-known methodologies exist for building a Data Warehouse. In this pr
      - Purpose: Final curated dataset for dashboards, KPIs, and insights.
 
   ## Part 8: Draw the Data Architecture using Draw.io
+  ## Part 9: Define Project naming convention
+    In this project, the **`snake_case`** convention is used for naming all:
+    - File names
+    - Folder names
+    - Table names
+    - Column names
+    - SQL scripts
 
