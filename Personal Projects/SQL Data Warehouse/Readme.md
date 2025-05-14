@@ -149,10 +149,25 @@ Several well-known methodologies exist for building a Data Warehouse. In this pr
 
   ## Part 8: Draw the Data Architecture using Draw.io
   ## Part 9: Define Project naming convention
-    In this project, the **`snake_case`** convention is used for naming all:
-    - File names
-    - Folder names
-    - Table names
-    - Column names
-    - SQL scripts
+  ### General Principle
+  1. Naming Convention: The snake_case convention is used for naming all components
+  2. Language: Use English for all names.
+  3. Avoid SQL reserved words
+     
+### Table Naming Convention
+  #### Bronze
+ 
+  All table names in the Bronze layer must begin with the **source system name** and reflect the original table names **without any renaming**.
+
+  - **Format**: `<sourcesystem>_<entity>`
+    - `<sourcesystem>`: Name of the source system (e.g., `crm`, `erp`)
+    - `<entity>`: Exact table name from the source system
+  - **Example**:  
+    `crm_customer_info` → Customer information from the CRM system
+
+
+  #### Silver
+   - Exactly like Bronze Layer
+
+  #### Gold
 
