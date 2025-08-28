@@ -24,14 +24,12 @@ This repository documents the step-by-step process of building a Power BI dashbo
 ## Step 4: Data Cleaning / Quality Check
 - Remove duplicates, handle missing values.
 - Standardize column names.
-- Check for data accuracy and consistency.
 
 ---
 
 ## Step 5: Data Modeling
 - Define relationships between tables.
 - Build a star schema where possible.
-- Ensure referential integrity.
 
 ---
 
