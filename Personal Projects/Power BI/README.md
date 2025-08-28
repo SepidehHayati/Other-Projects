@@ -7,10 +7,10 @@ This repository documents the step-by-step process of building a Power BI dashbo
 - Identify the business question/problem.
 - Decide what kind of insights the dashboard should provide.
 - Define the key KPIs and metrics to be analyzed.
-    * Total sales: the overall revenue generated from all items sold.
-    * Average sales: the avarage revenue per sale.
-    * Number of items: the total count of items sold.
-    * Avarage rating: the avarage cistomer rating for item sold.
+    * **Total sales**: the overall revenue generated from all items sold.
+    * **Average sales**: the avarage revenue per sale.
+    * **Number of items**: the total count of items sold.
+    * **Avarage rating**: the avarage cistomer rating for item sold.
 
 ---
 
