@@ -29,7 +29,7 @@ This repository documents the step-by-step process of building a Power BI dashbo
 
 ---
 
-## Step 4: Data Modeling
+## Step 4: Data Modeling (is not done in this project)
 - Define relationships between tables.
 - Build a star schema where possible.
 
