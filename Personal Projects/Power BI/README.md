@@ -7,6 +7,10 @@ This repository documents the step-by-step process of building a Power BI dashbo
 - Identify the business question/problem.
 - Decide what kind of insights the dashboard should provide.
 - Define the key KPIs and metrics to be analyzed.
+    * Total sales
+    * Average sales
+    * Number of items
+    * Avarage rating
 
 ---
 
